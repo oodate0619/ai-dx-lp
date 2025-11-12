@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI導入・業務改善（DX）伴走サポート | 株式会社ルクム</title>
+    <meta name="description" content="中小企業向けAI導入支援。「何から始めていいか分からない」を解決し、年間252万円〜504万円の生産性向上を実現します。">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap');
+        
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            color: #0F172A;
+            line-height: 1.8;
+        }
+        
+        .card-hover {
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 400px;
+        }
+        
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+        
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+        
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+        
+        .cta-button {
+            background: #1E40AF;
+            color: white;
+            box-shadow: 0 1px 3px rgba(30, 64, 175, 0.12);
+            transition: all 0.25s ease;
+        }
+        
+        .cta-button:hover {
+            background: #1E3A8A;
+            box-shadow: 0 2px 6px rgba(30, 64, 175, 0.18);
+        }
+        
+        .cta-button:focus-visible {
+            outline: 2px solid #1E40AF;
+            outline-offset: 2px;
+        }
+        
+        .cta-button-secondary {
+            background: white;
+            color: #1E40AF;
+            border: 1px solid #1E40AF;
+            box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+            transition: all 0.25s ease;
+        }
+        
+        .cta-button-secondary:hover {
+            background: #F8FAFC;
+            box-shadow: 0 2px 6px rgba(30, 64, 175, 0.12);
+        }
+        
+        .cta-button-secondary:focus-visible {
+            outline: 2px solid #1E40AF;
+            outline-offset: 2px;
+        }
+        
+        .icon-wrapper {
+            background: #EEF2FF;
+            border: 1px solid #E5E7EB;
+        }
+        
+        .section-spacing {
+            padding-top: 72px;
+            padding-bottom: 88px;
+        }
+    </style>
+</head>
+<body class="smooth-scroll bg-white">
+    
+    <!-- Header/Navigation -->
+    <header class="bg-white border-b border-gray-100 fixed w-full top-0 z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center max-w-6xl">
+            <div class="text-xl font-bold text-gray-900">
+                株式会社ルクム
+            </div>
+            <a href="#contact" class="cta-button px-6 py-2 rounded-lg text-sm font-semibold">
+                無料相談
+            </a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 px-4 bg-white">
+        <div class="container mx-auto text-center max-w-3xl">
+            <h1 class="text-3xl md:text-5xl font-bold mb-6 leading-tight text-gray-900">
+                AIを使いたい。でも<br>
+                「何から始めていいか分からない」<br>
+                中小企業経営者様へ
+            </h1>
+            <p class="text-base md:text-lg mb-4 leading-relaxed text-gray-600">
+                それは「AIを学ぶ」のが目的になっているから。
+            </p>
+            <p class="text-lg md:text-xl font-bold mb-10 leading-relaxed text-gray-900">
+                「AI研修」で終わらせない。<br>
+                「AIで成果を出す仕組みづくり」伴走サポート
+            </p>
+            <a href="#contact" class="inline-block bg-gray-900 text-white px-10 py-4 rounded-lg text-base font-semibold hover:bg-gray-800 transition-all duration-300 shadow-sm">
+                まずは無料でAI活用診断を試してみる
+            </a>
+        </div>
+    </section>
+
+    <!-- KPI Strip -->
+    <section class="py-12 px-4 bg-white border-t border-b border-gray-100">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="text-center">
+                    <div class="text-2xl font-bold text-gray-900 mb-1">月20〜50時間</div>
+                    <div class="text-sm text-gray-600">工数削減</div>
+                </div>
+                <div class="text-center border-l-0 md:border-l border-gray-100">
+                    <div class="text-2xl font-bold text-gray-900 mb-1">月5〜10万円</div>
+                    <div class="text-sm text-gray-600">外注費削減</div>
+                </div>
+                <div class="text-center border-l-0 md:border-l border-gray-100">
+                    <div class="text-2xl font-bold text-gray-900 mb-1">月10〜20万円</div>
+                    <div class="text-sm text-gray-600">売上貢献</div>
+                </div>
+                <div class="text-center border-l-0 md:border-l border-gray-100">
+                    <div class="text-2xl font-bold text-gray-900 mb-1">年252〜504万円</div>
+                    <div class="text-sm text-gray-600">生産性向上</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem/Empathy Section -->
+    <section class="section-spacing px-4 bg-white">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-12 max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+                    9割の企業が、こんな「最初の一歩」で止まっています
+                </h2>
+                <p class="text-base text-gray-600">多くの経営者が同じ悩みを抱えています</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                <div class="bg-white p-8 rounded-lg border border-gray-200 shadow-sm">
+                    <p class="text-gray-900 font-semibold mb-2">AIに興味はあるけど、何から始めれば？</p>
+                    <p class="text-sm text-gray-600 leading-relaxed">社内で知見ゼロ、導入検討すら止まっている</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg border border-gray-200 shadow-sm">
+                    <p class="text-gray-900 font-semibold mb-2">現場が忙しく、勉強する時間がない</p>
+                    <p class="text-sm text-gray-600 leading-relaxed">日々の業務で手一杯、学習の余裕がない</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg border border-gray-200 shadow-sm">
+                    <p class="text-gray-900 font-semibold mb-2">外部コンサルは高額で手が出ない</p>
+                    <p class="text-sm text-gray-600 leading-relaxed">コンサル費・システム費が100万円単位</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg border border-gray-200 shadow-sm">
+                    <p class="text-gray-900 font-semibold mb-2">自社にどう使うか誰も設計できない</p>
+                    <p class="text-sm text-gray-600 leading-relaxed">AI活用の具体的なイメージが持てない</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="section-spacing px-4 bg-gray-50">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-12 max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+                    私たちが目指すのは「年間252〜504万円の生産性アップ」です
+                </h2>
+                <p class="text-base text-gray-600">AI導入で実現できる3つの成果</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="bg-white p-10 rounded-lg border border-gray-200 shadow-sm card-hover">
+                    <div class="w-14 h-14 icon-wrapper rounded-lg flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-7 h-7" stroke="#1E40AF" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-900 text-center">工数削減</h3>
+                    <p class="text-3xl font-bold mb-3 text-gray-900 text-center">月20〜50時間</p>
+                    <p class="text-gray-600 leading-relaxed text-center text-sm">人件費換算で月6〜12万円分の定型業務を削減</p>
+                </div>
+                
+                <div class="bg-white p-10 rounded-lg border border-gray-200 shadow-sm card-hover">
+                    <div class="w-14 h-14 icon-wrapper rounded-lg flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-7 h-7" stroke="#1E40AF" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-900 text-center">コスト削減</h3>
+                    <p class="text-3xl font-bold mb-3 text-gray-900 text-center">月5〜10万円</p>
+                    <p class="text-gray-600 leading-relaxed text-center text-sm">デザイン・事務代行の外注費をAIで内製化</p>
+                </div>
+                
+                <div class="bg-white p-10 rounded-lg border border-gray-200 shadow-sm card-hover">
+                    <div class="w-14 h-14 icon-wrapper rounded-lg flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-7 h-7" stroke="#1E40AF" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-900 text-center">売上効率UP</h3>
+                    <p class="text-3xl font-bold mb-3 text-gray-900 text-center">月10〜20万円</p>
+                    <p class="text-gray-600 leading-relaxed text-center text-sm">創出時間を攻めの業務へ転換し売上貢献</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies Section -->
+    <section class="section-spacing px-4 bg-white">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-12 max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+                    「AI店長」「AI現場監督」が御社をサポート
+                </h2>
+                <p class="text-base text-gray-600">業種別の導入事例をご紹介します</p>
+            </div>
+            
+            <!-- Tab Navigation -->
+            <div class="flex flex-wrap justify-center gap-3 mb-12">
+                <button onclick="switchTab('restaurant')" id="tab-restaurant" class="tab-button px-8 py-3 rounded-lg font-semibold transition-all duration-300 cta-button text-sm">
+                    飲食業
+                </button>
+                <button onclick="switchTab('construction')" id="tab-construction" class="tab-button px-8 py-3 rounded-lg font-semibold transition-all duration-300 cta-button-secondary text-sm">
+                    建設業
+                </button>
+                <button onclick="switchTab('salon')" id="tab-salon" class="tab-button px-8 py-3 rounded-lg font-semibold transition-all duration-300 cta-button-secondary text-sm">
+                    美容・サロン系
+                </button>
+            </div>
+            
+            <!-- Tab Content -->
+            <div class="max-w-4xl mx-auto">
+                <!-- Restaurant Tab -->
+                <div id="content-restaurant" class="tab-content active">
+                    <div class="bg-white p-10 rounded-lg border border-gray-200 shadow-sm">
+                        <h3 class="text-xl font-bold mb-8 text-gray-900">
+                            飲食業：現場の手間を「AI店長」で丸ごと時短
+                        </h3>
+                        
+                        <div class="space-y-6">
+                            <div class="border-l-2 border-gray-900 pl-6">
+                                <p class="text-sm text-gray-600 mb-2">予約管理がLINE・ノート・口頭でバラバラ</p>
+                                <p class="text-base font-semibold text-gray-900">→ Googleフォーム＋ChatGPT自動返信で対応時間70%削減</p>
+                            </div>
+                            
+                            <div class="border-l-2 border-gray-900 pl-6">
+                                <p class="text-sm text-gray-600 mb-2">新メニュー／POPを毎回デザイナーへ依頼</p>
+                                <p class="text-base font-semibold text-gray-900">→ AIで自動デザイン＆文案生成、外注費3万円→0円／件</p>
+                            </div>
+                            
+                            <div class="border-l-2 border-gray-900 pl-6">
+                                <p class="text-sm text-gray-600 mb-2">日報・発注を手書きで転記</p>
+                                <p class="text-base font-semibold text-gray-900">→ スプレッドシート＋自動集計で管理コスト50%削減</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-10 p-6 bg-gray-50 rounded-lg border border-gray-200">
+                            <p class="text-gray-900 font-semibold leading-relaxed text-sm">
+                                店長が本来やるべき"人の育成"に時間を使えるように
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Construction Tab -->
+                <div id="content-construction" class="tab-content">
+                    <div class="bg-white p-10 rounded-lg border border-gray-200 shadow-sm">
+                        <h3 class="text-xl font-bold mb-8 text-gray-900">
+                            建設業：報告・計画・現場連携を「AI現場監督」がサポート
+                        </h3>
+                        
+                        <div class="space-y-6">
+                            <div class="border-l-2 border-gray-900 pl-6">
+                                <p class="text-sm text-gray-600 mb-2">日報が手書き・FAX・写真別送</p>
+                                <p class="text-base font-semibold text-gray-900">→ AI日報テンプレ＋音声入力＋自動要約で月200時間削減</p>
+                            </div>
+                            
+                            <div class="border-l-2 border-gray-900 pl-6">
+                                <p class="text-sm text-gray-600 mb-2">工程表がExcelで手作業</p>
+                                <p class="text-base font-semibold text-gray-900">→ AIがスケジュールを自動補完・更新、段取りミス80%減</p>
+                            </div>
+                            
+                            <div class="border-l-2 border-gray-900 pl-6">
+                                <p class="text-sm text-gray-600 mb-2">現場報告をExcelで作成</p>
+                                <p class="text-base font-semibold text-gray-900">→ AIが写真から自動レポート生成、報告作業70%削減</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-10 p-6 bg-gray-50 rounded-lg border border-gray-200">
+                            <p class="text-gray-900 font-semibold leading-relaxed text-sm">
+                                紙からデジタルに変わるだけで、現場が回るスピードが倍に
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Salon Tab -->
+                <div id="content-salon" class="tab-content">
+                    <div class="bg-white p-10 rounded-lg border border-gray-200 shadow-sm">
+                        <h3 class="text-xl font-bold mb-8 text-gray-900">
+                            美容・サロン系：顧客管理と集客を「AIマネージャー」が自動化
+                        </h3>
+                        
+                        <div class="space-y-6">
+                            <div class="border-l-2 border-gray-900 pl-6">
+                                <p class="text-sm text-gray-600 mb-2">DM・リピート連絡を手動で送信、再来率が低い</p>
+                                <p class="text-base font-semibold text-gray-900">→ ChatGPT＋LINE公式で自動化、再来率15%→35%にUP</p>
+                            </div>
+                            
+                            <div class="border-l-2 border-gray-900 pl-6">
+                                <p class="text-sm text-gray-600 mb-2">SNS投稿が思いつき</p>
+                                <p class="text-base font-semibold text-gray-900">→ AIがネタ出し・画像作成・スケジュール化、投稿時間80%削減</p>
+                            </div>
+                            
+                            <div class="border-l-2 border-gray-900 pl-6">
+                                <p class="text-sm text-gray-600 mb-2">カルテが紙・記録バラバラ</p>
+                                <p class="text-base font-semibold text-gray-900">→ AI要約＋顧客データベース化で接客の質・継続率UP</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-10 p-6 bg-gray-50 rounded-lg border border-gray-200">
+                            <p class="text-gray-900 font-semibold leading-relaxed text-sm">
+                                1店舗に1人"AIマネージャー"がいる感覚
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Unique Value Proposition -->
+    <section class="section-spacing px-4 bg-gray-50">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-12 max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+                    AI研修だけで終わらせない。3つの強み
+                </h2>
+                <p class="text-base text-gray-600">他社にはない、私たちが選ばれる理由</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="bg-white p-10 rounded-lg border border-gray-200 shadow-sm card-hover">
+                    <div class="w-14 h-14 icon-wrapper rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7" stroke="#1E40AF" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold mb-4 text-gray-900">1. 研修で終わらない</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm">
+                        「研修」→「実装」→「内製化」まで一気通貫。AIを維持できる人材が社内に残ります。
+                    </p>
+                </div>
+                
+                <div class="bg-white p-10 rounded-lg border border-gray-200 shadow-sm card-hover">
+                    <div class="w-14 h-14 icon-wrapper rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7" stroke="#1E40AF" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold mb-4 text-gray-900">2. 高額なシステム不要</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm">
+                        ChatGPTや無料ツール中心に「明日からできる改善」を実装。100万円単位の初期投資は不要。
+                    </p>
+                </div>
+                
+                <div class="bg-white p-10 rounded-lg border border-gray-200 shadow-sm card-hover">
+                    <div class="w-14 h-14 icon-wrapper rounded-lg flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7" stroke="#1E40AF" fill="none" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold mb-4 text-gray-900">3. 専門知識は一切不要</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm">
+                        ITが得意でない社員様が対象。日常業務を一緒に"AI対応"に変えるだけで大きな効果。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process/Flow Section -->
+    <section class="section-spacing px-4 bg-white">
+        <div class="container mx-auto max-w-5xl">
+            <div class="text-center mb-12 max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+                    ご導入までの流れ
+                </h2>
+                <p class="text-base text-gray-600">4つのステップで、スムーズに導入をサポートします</p>
+            </div>
+            
+            <div class="space-y-10 max-w-3xl mx-auto">
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center text-white text-xl font-bold">
+                        1
+                    </div>
+                    <div class="ml-6 flex-grow">
+                        <h3 class="text-lg font-bold mb-2 text-gray-900">初回相談（無料）</h3>
+                        <p class="text-gray-600 leading-relaxed text-sm">
+                            まずは無料相談フォームからご連絡ください。御社の状況やお悩みをお聞かせいただき、AI導入の可能性を探ります。
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center text-white text-xl font-bold">
+                        2
+                    </div>
+                    <div class="ml-6 flex-grow">
+                        <h3 class="text-lg font-bold mb-2 text-gray-900">現状ヒアリング・課題抽出</h3>
+                        <p class="text-gray-600 leading-relaxed text-sm">
+                            御社の業務フローと課題を整理。経営者・現場スタッフへのヒアリングを通じて、AI活用できる領域を明確化します。
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center text-white text-xl font-bold">
+                        3
+                    </div>
+                    <div class="ml-6 flex-grow">
+                        <h3 class="text-lg font-bold mb-2 text-gray-900">改善プラン提出</h3>
+                        <p class="text-gray-600 leading-relaxed text-sm">
+                            御社専用の「AI導入3ステップ」を提案します。すぐに始められる具体的な施策と、期待できる成果をご提示します。
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center text-white text-xl font-bold">
+                        4
+                    </div>
+                    <div class="ml-6 flex-grow">
+                        <h3 class="text-lg font-bold mb-2 text-gray-900">ご契約・サポート開始</h3>
+                        <p class="text-gray-600 leading-relaxed text-sm">
+                            プランにご納得いただけたら、伴走サポートがスタート。月2回のミーティングとチャットサポートで確実に成果を出します。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Simulator Section -->
+    <section id="simulator" class="section-spacing px-4 bg-white">
+        <div class="container mx-auto max-w-5xl">
+            <div class="text-center mb-12 max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">体験シミュレーター</h2>
+                <p class="text-base text-gray-600">「明日からできる改善」で、どれだけ"お金と時間"が戻るかを即試算</p>
+            </div>
+
+            <!-- Tab Navigation -->
+            <div class="flex gap-3 justify-center mb-10 flex-wrap" role="tablist">
+                <button class="sim-tab px-6 py-2.5 rounded-lg border border-gray-200 text-gray-700 font-semibold transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-600"
+                        data-target="#sim-roi" aria-selected="true">
+                    【全業種】ROI計算
+                </button>
+                <button class="sim-tab px-6 py-2.5 rounded-lg border border-gray-200 text-gray-700 font-semibold transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-600"
+                        data-target="#sim-construction">
+                    【建設】AI日報
+                </button>
+                <button class="sim-tab px-6 py-2.5 rounded-lg border border-gray-200 text-gray-700 font-semibold transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-600"
+                        data-target="#sim-restaurant">
+                    【飲食】AI POP
+                </button>
+            </div>
+
+            <!-- ROI Calculator Tab -->
+            <div id="sim-roi" class="sim-panel">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white p-8 rounded-lg border border-gray-200 shadow-sm">
+                        <h3 class="text-lg font-bold text-gray-900 mb-6">入力</h3>
+                        <div class="space-y-5">
+                            <label class="block">
+                                <span class="text-sm font-semibold text-gray-700 mb-2 block">平均時給（円）</span>
+                                <input id="roi-wage" type="number" value="2000" min="0" 
+                                       class="mt-1 w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                            </label>
+                            <label class="block">
+                                <span class="text-sm font-semibold text-gray-700 mb-2 block">対象人数（人）</span>
+                                <input id="roi-people" type="number" value="5" min="0" 
+                                       class="mt-1 w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                            </label>
+                            <label class="block">
+                                <span class="text-sm font-semibold text-gray-700 mb-2 block">1人あたり月間削減時間（時間）</span>
+                                <input id="roi-hours" type="number" value="20" min="0" 
+                                       class="mt-1 w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                            </label>
+                            <label class="block">
+                                <span class="text-sm font-semibold text-gray-700 mb-2 block">月あたり外注費削減（円）</span>
+                                <input id="roi-outsourcing" type="number" value="50000" min="0" 
+                                       class="mt-1 w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                            </label>
+                            <label class="block">
+                                <span class="text-sm font-semibold text-gray-700 mb-2 block">ミス削減率（％）</span>
+                                <input id="roi-error" type="number" value="10" min="0" max="100" 
+                                       class="mt-1 w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                            </label>
+                            <button id="roi-run" 
+                                    class="mt-4 w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-bold text-white shadow-sm transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-600"
+                                    style="background:#1E40AF;">
+                                → 試算する
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-lg border border-gray-200 shadow-sm">
+                        <h3 class="text-lg font-bold text-gray-900 mb-6">結果</h3>
+                        <div id="roi-result" class="space-y-4">
+                            <p class="text-sm text-gray-600">入力後に結果が表示されます。</p>
+                        </div>
+                        <div class="mt-8 p-5 bg-white rounded-lg border-l-4 shadow-sm" style="border-color:#F6C453;">
+                            <p class="font-semibold text-gray-900 mb-2">ヒント：</p>
+                            <p class="text-gray-600 text-sm leading-relaxed">結果が <strong>年間360万円</strong> 近ければ、LPの実績表現と整合性が出ます。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Construction Tab -->
+            <div id="sim-construction" class="sim-panel hidden">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white p-8 rounded-lg border border-gray-200 shadow-sm">
+                        <h3 class="text-lg font-bold text-gray-900 mb-4">Before（日報のメモ）</h3>
+                        <textarea id="con-before" 
+                                  class="w-full h-48 p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent text-sm leading-relaxed">天気：晴れ。A地点 基礎工事5名。資材B不足で午後遅延。明日はC地点。田中さんに段取り確認済み。</textarea>
+                        <button id="con-run" 
+                                class="mt-4 inline-flex items-center justify-center px-6 py-3 rounded-lg font-bold text-white shadow-sm transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-600"
+                                style="background:#1E40AF;">
+                            → AI整形（デモ）
+                        </button>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-lg border border-gray-200 shadow-sm">
+                        <h3 class="text-lg font-bold text-gray-900 mb-4">After（整形結果・デモ）</h3>
+                        <div id="con-after" class="min-h-48 whitespace-pre-wrap text-sm text-gray-700 leading-relaxed"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Restaurant Tab -->
+            <div id="sim-restaurant" class="sim-panel hidden">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white p-8 rounded-lg border border-gray-200 shadow-sm">
+                        <h3 class="text-lg font-bold text-gray-900 mb-6">指示</h3>
+                        <div class="space-y-5">
+                            <label class="block">
+                                <span class="text-sm font-semibold text-gray-700 mb-2 block">メニュー名</span>
+                                <input id="pop-name" 
+                                       class="mt-1 w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent" 
+                                       value="情熱のナポリタン">
+                            </label>
+                            <label class="block">
+                                <span class="text-sm font-semibold text-gray-700 mb-2 block">特徴・打ち出し</span>
+                                <input id="pop-copy" 
+                                       class="mt-1 w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent" 
+                                       value="濃厚ソースと極太麺、ランチの王様">
+                            </label>
+                            <button id="pop-run" 
+                                    class="mt-4 inline-flex items-center justify-center px-6 py-3 rounded-lg font-bold text-white shadow-sm transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-600"
+                                    style="background:#1E40AF;">
+                                → 画像生成（デモ）
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 p-8 rounded-lg border border-gray-200 shadow-sm flex items-center justify-center">
+                        <img id="pop-img" class="max-h-64 rounded-lg shadow-sm hidden" alt="デモ画像">
+                        <p id="pop-ph" class="text-gray-400 text-sm">ここに画像（デモ）が表示されます</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section-spacing px-4 bg-gray-50">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-12 max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+                    状況に合わせて選べる2つのプラン
+                </h2>
+                <p class="text-base text-gray-600">まずは試したい方も、本格導入したい方も</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Plan A: Group Support -->
+                <div class="bg-white p-10 rounded-lg border border-gray-200 shadow-sm card-hover">
+                    <div class="mb-8">
+                        <div class="inline-block border border-gray-300 rounded px-3 py-1 text-xs font-semibold text-gray-700 mb-4">
+                            グループサポート
+                        </div>
+                        <div class="flex items-baseline mb-2">
+                            <span class="text-4xl font-bold text-gray-900">¥200,000</span>
+                            <span class="ml-2 text-sm text-gray-600">/ 月<span class="text-xs ml-1" style="color: #F6C453;">（税込）</span></span>
+                        </div>
+                        <p class="text-sm text-gray-600 leading-relaxed">5名以内想定</p>
+                    </div>
+                    
+                    <div class="mb-8 pb-8 border-b border-gray-100">
+                        <p class="text-sm font-semibold text-gray-900 mb-3">含まれるもの</p>
+                        <ul class="space-y-3 text-sm text-gray-600">
+                            <li class="leading-relaxed">— 月2回のオンラインミーティング</li>
+                            <li class="leading-relaxed">— AI活用レクチャー</li>
+                            <li class="leading-relaxed">— 業務改善テーマ別ワーク</li>
+                            <li class="leading-relaxed">— 質疑応答＆共有フォロー</li>
+                        </ul>
+                    </div>
+                    
+                    <p class="text-xs text-gray-600 leading-relaxed mb-6">
+                        まずはAI活用を社内に浸透させたい方向け
+                    </p>
+                    
+                    <a href="#contact" class="block text-center cta-button-secondary px-6 py-3 rounded-lg font-semibold text-sm">
+                        このプランを詳しく見る
+                    </a>
+                </div>
+                
+                <!-- Plan B: Individual Support (Recommended) -->
+                <div class="bg-white p-10 rounded-lg border-2 border-gray-900 shadow-sm card-hover relative">
+                    <div class="absolute -top-3 left-6">
+                        <span class="bg-gray-900 text-white px-4 py-1 rounded text-xs font-semibold">おすすめ</span>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <div class="inline-block border border-gray-900 rounded px-3 py-1 text-xs font-semibold text-gray-900 mb-4">
+                            個別伴走型
+                        </div>
+                        <div class="flex items-baseline mb-2">
+                            <span class="text-4xl font-bold text-gray-900">¥300,000</span>
+                            <span class="ml-2 text-sm text-gray-600">/ 月<span class="text-xs ml-1" style="color: #F6C453;">（税込）</span></span>
+                        </div>
+                        <p class="text-sm text-gray-600 leading-relaxed">経営者＋担当3名以内想定</p>
+                    </div>
+                    
+                    <div class="mb-8 pb-8 border-b border-gray-100">
+                        <p class="text-sm font-semibold text-gray-900 mb-3">含まれるもの</p>
+                        <ul class="space-y-3 text-sm text-gray-600">
+                            <li class="leading-relaxed">— 現状業務のヒアリング＆分析</li>
+                            <li class="leading-relaxed">— AI導入</li>
+                            <li class="leading-relaxed">— 自動化プロジェクト設計</li>
+                            <li class="leading-relaxed">— 社内マニュアル整備</li>
+                            <li class="leading-relaxed">— 運用テンプレ整備</li>
+                            <li class="leading-relaxed">— 月2回の伴走ミーティング</li>
+                        </ul>
+                    </div>
+                    
+                    <p class="text-xs text-gray-600 leading-relaxed mb-6">
+                        実際に業務改善と仕組み化まで進めたい企業向け
+                    </p>
+                    
+                    <a href="#contact" class="block text-center cta-button px-6 py-3 rounded-lg font-bold text-sm">
+                        このプランを詳しく見る
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section-spacing px-4 bg-white">
+        <div class="container mx-auto max-w-4xl">
+            <div class="text-center mb-12 max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+                    よくあるご質問
+                </h2>
+                <p class="text-base text-gray-600">お客様からよくいただくご質問にお答えします</p>
+            </div>
+            
+            <div class="space-y-4">
+                <div class="faq-item bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden">
+                    <button onclick="toggleFAQ(this)" class="w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 transition-colors">
+                        <span class="font-semibold text-gray-900 pr-4 leading-relaxed text-sm">Q. どんな企業が対象ですか？</span>
+                        <svg class="faq-icon w-5 h-5 flex-shrink-0 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-6 pb-6">
+                        <p class="text-gray-600 leading-relaxed text-sm">
+                            社員5〜100名規模で、AIやITが得意でない会社様が対象です。「何から始めればいいか分からない」と感じている中小企業経営者の方にこそ、ご活用いただきたいサービスです。業種は問いません。
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="faq-item bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden">
+                    <button onclick="toggleFAQ(this)" class="w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 transition-colors">
+                        <span class="font-semibold text-gray-900 pr-4 leading-relaxed text-sm">Q. 難しい専門知識は必要ですか？</span>
+                        <svg class="faq-icon w-5 h-5 flex-shrink-0 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-6 pb-6">
+                        <p class="text-gray-600 leading-relaxed text-sm">
+                            一切不要です。日常の業務を一緒に"AI対応"に変えるだけです。専門用語を使わず、現場の言葉で丁寧にサポートします。ITが苦手な方でも安心してご利用いただけます。
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="faq-item bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden">
+                    <button onclick="toggleFAQ(this)" class="w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 transition-colors">
+                        <span class="font-semibold text-gray-900 pr-4 leading-relaxed text-sm">Q. 初期費用はかかりますか？</span>
+                        <svg class="faq-icon w-5 h-5 flex-shrink-0 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5"></path>
+                        </svg>
+                    </button>
+                    <div class="faq-answer px-6 pb-6">
+                        <p class="text-gray-600 leading-relaxed text-sm">
+                            月額制のみで、高額な初期費用はありません。無料ツール中心の導入を行うため、システム構築費も基本的に不要です。まずは無料相談から、お気軽にご相談ください。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profile Section -->
+    <section class="section-spacing px-4 bg-gray-50">
+        <div class="container mx-auto max-w-4xl">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+                    サポート担当者
+                </h2>
+            </div>
+            
+            <div class="bg-white p-10 md:p-12 rounded-lg border border-gray-200 shadow-sm">
+                <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
+                    <div class="flex-shrink-0">
+                        <img src="https://placehold.co/120x120/F1F5F9/64748B?text=Profile" alt="大館美聖" class="w-28 h-28 rounded-lg border border-gray-200">
+                    </div>
+                    <div class="flex-grow text-center md:text-left">
+                        <h3 class="text-xl font-bold mb-1 text-gray-900">大館 美聖（おおだて よしまさ）</h3>
+                        <p class="font-semibold mb-6 text-gray-600 text-sm">株式会社ルクム 代表取締役</p>
+                        <p class="text-gray-600 leading-relaxed text-sm">
+                            中小企業のDX支援歴10年。AIアレルギーをなくし、現場の「明日が楽になる」改善を数百社で実現。専門用語を使わない伴走サポートが信条。「AI導入は難しくない。日常業務を少し工夫するだけ」をモットーに、中小企業の生産性向上に貢献しています。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Closing/CTA Section -->
+    <section id="contact" class="section-spacing px-4 bg-gray-900 text-white">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 leading-tight">
+                御社に「AIで削れる時間」を<br>一緒に見つけましょう
+            </h2>
+            
+            <div class="bg-white/5 border border-white/10 p-10 rounded-lg mb-10 max-w-2xl mx-auto">
+                <p class="text-base mb-8 leading-relaxed font-semibold">
+                    無料相談で、こんなことが分かります
+                </p>
+                <div class="grid md:grid-cols-3 gap-6 text-left text-sm">
+                    <div class="flex items-start">
+                        <span class="mr-3 opacity-75">—</span>
+                        <span class="leading-relaxed">現状業務の課題整理</span>
+                    </div>
+                    <div class="flex items-start">
+                        <span class="mr-3 opacity-75">—</span>
+                        <span class="leading-relaxed">AI活用できる領域の診断</span>
+                    </div>
+                    <div class="flex items-start">
+                        <span class="mr-3 opacity-75">—</span>
+                        <span class="leading-relaxed">AI導入3ステップの提案</span>
+                    </div>
+                </div>
+            </div>
+            
+            <p class="text-lg mb-10 leading-relaxed opacity-90">
+                決して"未来の話"ではなく、"明日からできる改善"です。<br>
+                小さな一歩が、御社の大きな生産性向上につながります。
+            </p>
+            
+            <div class="space-y-4 mb-12 max-w-xl mx-auto">
+                <a href="/cdn-cgi/l/email-protection#365f585059765a435544435b185559185c46" class="block bg-white text-gray-900 px-10 py-4 rounded-lg text-base font-bold hover:bg-gray-100 transition-all duration-300 shadow-sm">
+                    今すぐ無料でAI活用診断を申し込む
+                </a>
+                <p class="text-xs opacity-75">※ご相談は完全無料です。お気軽にお問い合わせください。</p>
+            </div>
+            
+            <div class="border-t border-white/10 pt-10 mt-10">
+                <h3 class="text-lg font-bold mb-8">お問い合わせ方法</h3>
+                <div class="grid md:grid-cols-2 gap-4 text-left max-w-2xl mx-auto">
+                    <div class="bg-white/5 border border-white/10 p-6 rounded-lg">
+                        <p class="font-semibold mb-3 text-sm">📧 メール</p>
+                        <a href="/cdn-cgi/l/email-protection#3851565e5778544d5b4a4d55165b57165248" class="text-white hover:opacity-75 transition-colors text-sm"><span class="__cf_email__" data-cfemail="dab3b4bcb59ab6afb9a8afb7f4b9b5f4b0aa">[email&#160;protected]</span></a>
+                    </div>
+                    <div class="bg-white/5 border border-white/10 p-6 rounded-lg">
+                        <p class="font-semibold mb-3 text-sm">📞 電話</p>
+                        <a href="tel:090-9299-2377" class="text-white hover:opacity-75 transition-colors text-sm">090-9299-2377</a>
+                    </div>
+                    <div class="bg-white/5 border border-white/10 p-6 rounded-lg">
+                        <p class="font-semibold mb-3 text-sm">💬 LINE</p>
+                        <a href="https://line.me/ti/p/zUSQ7mCx7F" target="_blank" class="text-white hover:opacity-75 transition-colors text-sm">LINEで相談する</a>
+                    </div>
+                    <div class="bg-white/5 border border-white/10 p-6 rounded-lg">
+                        <p class="font-semibold mb-3 text-sm">💼 Chatwork</p>
+                        <a href="https://www.chatwork.com/odate_ademo" target="_blank" class="text-white hover:opacity-75 transition-colors text-sm">Chatworkで相談する</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 text-white py-12 px-4 border-t border-gray-800">
+        <div class="container mx-auto max-w-6xl">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0 text-center md:text-left">
+                    <h3 class="text-lg font-bold mb-2">株式会社ルクム</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">AI導入・業務改善（DX）伴走サポート</p>
+                </div>
+                <div class="text-center md:text-right">
+                    <p class="text-gray-400 mb-2 text-sm">お問い合わせ</p>
+                    <a href="/cdn-cgi/l/email-protection#224b4c444d624e574150574f0c414d0c4852" class="text-white hover:opacity-75 transition-colors text-sm"><span class="__cf_email__" data-cfemail="f891969e97b8948d9b8a8d95d69b97d69288">[email&#160;protected]</span></a>
+                    <p class="text-gray-400 mt-4 text-sm">
+                        <a href="https://lucrum.co.jp/" target="_blank" class="hover:opacity-75 transition-colors">https://lucrum.co.jp/</a>
+                    </p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-10 pt-8 text-center text-gray-500 text-xs">
+                <p>&copy; 2025 Lucrum Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    // Simulator Tab Functionality
+    (function(){
+        // Tab switching
+        const simTabs = document.querySelectorAll('.sim-tab');
+        const simPanels = document.querySelectorAll('.sim-panel');
+        
+        function activateSimTab(button) {
+            simTabs.forEach(b => {
+                b.classList.remove('bg-white');
+                b.style.background = '';
+                b.style.color = '';
+                b.setAttribute('aria-selected', 'false');
+            });
+            simPanels.forEach(p => p.classList.add('hidden'));
+            
+            button.setAttribute('aria-selected', 'true');
+            button.style.background = '#1E40AF';
+            button.style.color = '#fff';
+            
+            const target = document.querySelector(button.dataset.target);
+            if(target) target.classList.remove('hidden');
+        }
+        
+        simTabs.forEach((button, index) => {
+            button.addEventListener('click', () => activateSimTab(button));
+            if(index === 0) activateSimTab(button); // Activate first tab by default
+        });
+        
+        // ROI Calculator
+        const getElement = id => document.getElementById(id);
+        
+        getElement('roi-run').addEventListener('click', () => {
+            const wage = +getElement('roi-wage').value || 0;
+            const people = +getElement('roi-people').value || 0;
+            const hours = +getElement('roi-hours').value || 0;
+            const outsourcing = +getElement('roi-outsourcing').value || 0;
+            const errorRate = Math.min(100, Math.max(0, +getElement('roi-error').value || 0));
+            
+            // Labor cost reduction = hourly wage × people × hours saved
+            const laborMonthly = wage * people * hours;
+            // Error reduction (estimated as percentage of labor cost)
+            const errorMonthly = laborMonthly * (errorRate / 100);
+            const totalMonthly = laborMonthly + errorMonthly + outsourcing;
+            const totalYearly = totalMonthly * 12;
+            
+            const formatNumber = value => value.toLocaleString('ja-JP');
+            
+            getElement('roi-result').innerHTML = `
+                <div class="text-3xl font-bold mb-2" style="color:#1E40AF;">月間 効果見込み：¥${formatNumber(totalMonthly)}</div>
+                <div class="text-xl font-bold text-gray-900 mb-6">年間 効果見込み：¥${formatNumber(totalYearly)}</div>
+                <ul class="space-y-2 text-sm text-gray-700 bg-white p-4 rounded-lg border border-gray-200">
+                    <li>・人件費削減（工数）：¥${formatNumber(laborMonthly)} / 月</li>
+                    <li>・ミス削減（概算）：¥${formatNumber(errorMonthly)} / 月</li>
+                    <li>・外注費削減：¥${formatNumber(outsourcing)} / 月</li>
+                </ul>
+                <p class="mt-6 text-gray-600 text-sm leading-relaxed">※概算です。正式な見積は無料診断でヒアリング後に提示します。</p>
+            `;
+        });
+        
+        // Construction Demo (Text formatting)
+        getElement('con-run').addEventListener('click', () => {
+            const rawText = getElement('con-before').value.trim();
+            // Simple demo formatting
+            const formatted = `【作業概要】
+${rawText.includes('A地点') || rawText.includes('基礎') ? 'A地点 基礎工事（5名）' : '作業内容：記載あり'}
+
+【課題】
+資材不足による遅延（手配済み）
+
+【翌日の予定】
+C地点の作業／段取り確認済み
+
+【備考】
+天候：晴れ`;
+            
+            getElement('con-after').textContent = formatted;
+        });
+        
+        // Restaurant Demo (Image placeholder)
+        getElement('pop-run').addEventListener('click', () => {
+            const menuName = encodeURIComponent(getElement('pop-name').value || 'メニュー');
+            const menuCopy = encodeURIComponent(getElement('pop-copy').value || 'おすすめ');
+            // Using placeholder service for demo
+            const imageUrl = `https://placehold.co/800x600/1E40AF/FFFFFF/png?text=${menuName}%0A${menuCopy}&font=noto-sans-jp`;
+            
+            const imgElement = getElement('pop-img');
+            const placeholder = getElement('pop-ph');
+            
+            imgElement.src = imageUrl;
+            imgElement.classList.remove('hidden');
+            placeholder.classList.add('hidden');
+        });
+    })();
+    </script>
+
+    <script>
+        // Tab Switching
+        function switchTab(tabName) {
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            document.querySelectorAll('.tab-button').forEach(button => {
+                button.classList.remove('cta-button');
+                button.classList.add('cta-button-secondary');
+            });
+            
+            document.getElementById('content-' + tabName).classList.add('active');
+            
+            const activeButton = document.getElementById('tab-' + tabName);
+            activeButton.classList.remove('cta-button-secondary');
+            activeButton.classList.add('cta-button');
+        }
+        
+        // FAQ Toggle
+        function toggleFAQ(button) {
+            const faqItem = button.parentElement;
+            const isActive = faqItem.classList.contains('active');
+            
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            if (!isActive) {
+                faqItem.classList.add('active');
+            }
+        }
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerOffset = 80;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

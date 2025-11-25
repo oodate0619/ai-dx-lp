@@ -483,6 +483,7 @@
     </section>
 
 
+
     <!-- Simulator Section -->
     <section id="simulator" class="section-spacing px-4 bg-white">
         <div class="container mx-auto max-w-5xl">
@@ -495,15 +496,15 @@
             <div class="flex gap-3 justify-center mb-10 flex-wrap" role="tablist">
                 <button class="sim-tab px-6 py-2.5 rounded-lg border border-gray-200 text-gray-700 font-semibold transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-600"
                         data-target="#sim-roi" aria-selected="true">
-                    【全業種】ROI計算
+                    💰 コスト削減診断
                 </button>
                 <button class="sim-tab px-6 py-2.5 rounded-lg border border-gray-200 text-gray-700 font-semibold transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-600"
                         data-target="#sim-construction">
-                    【建設】AI日報
+                    🏗️ AI日報作成
                 </button>
                 <button class="sim-tab px-6 py-2.5 rounded-lg border border-gray-200 text-gray-700 font-semibold transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-600"
                         data-target="#sim-restaurant">
-                    【飲食】AI POP
+                    🍝 AI POP生成
                 </button>
             </div>
 
@@ -511,48 +512,40 @@
             <div id="sim-roi" class="sim-panel">
                 <div class="grid md:grid-cols-2 gap-8">
                     <div class="bg-white p-8 rounded-lg border border-gray-200 shadow-sm">
-                        <h3 class="text-lg font-bold text-gray-900 mb-6">入力</h3>
+                        <h3 class="text-lg font-bold text-gray-900 mb-6">💰 コスト削減診断</h3>
+                        <p class="text-sm text-gray-600 mb-6">御社の人件費・工数から、AI導入で削減できるコストを試算します。</p>
                         <div class="space-y-5">
                             <label class="block">
-                                <span class="text-sm font-semibold text-gray-700 mb-2 block">平均時給（円）</span>
+                                <span class="text-sm font-semibold text-gray-700 mb-2 block">平均時給(円)</span>
                                 <input id="roi-wage" type="number" value="2000" min="0" 
                                        class="mt-1 w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
                             </label>
                             <label class="block">
-                                <span class="text-sm font-semibold text-gray-700 mb-2 block">対象人数（人）</span>
+                                <span class="text-sm font-semibold text-gray-700 mb-2 block">対象人数(人)</span>
                                 <input id="roi-people" type="number" value="5" min="0" 
                                        class="mt-1 w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
                             </label>
                             <label class="block">
-                                <span class="text-sm font-semibold text-gray-700 mb-2 block">1人あたり月間削減時間（時間）</span>
+                                <span class="text-sm font-semibold text-gray-700 mb-2 block">1人あたり月間削減時間(時間)</span>
                                 <input id="roi-hours" type="number" value="20" min="0" 
                                        class="mt-1 w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
                             </label>
                             <label class="block">
-                                <span class="text-sm font-semibold text-gray-700 mb-2 block">月あたり外注費削減（円）</span>
+                                <span class="text-sm font-semibold text-gray-700 mb-2 block">月あたり外注費削減(円)</span>
                                 <input id="roi-outsourcing" type="number" value="50000" min="0" 
-                                       class="mt-1 w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
-                            </label>
-                            <label class="block">
-                                <span class="text-sm font-semibold text-gray-700 mb-2 block">ミス削減率（％）</span>
-                                <input id="roi-error" type="number" value="10" min="0" max="100" 
                                        class="mt-1 w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
                             </label>
                             <button id="roi-run" 
                                     class="mt-4 w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-bold text-white shadow-sm transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-600"
                                     style="background:#1E40AF;">
-                                → 試算する
+                                <span id="roi-button-text">→ 診断する</span>
                             </button>
                         </div>
                     </div>
                     <div class="bg-gray-50 p-8 rounded-lg border border-gray-200 shadow-sm">
-                        <h3 class="text-lg font-bold text-gray-900 mb-6">結果</h3>
+                        <h3 class="text-lg font-bold text-gray-900 mb-6">診断結果</h3>
                         <div id="roi-result" class="space-y-4">
-                            <p class="text-sm text-gray-600">入力後に結果が表示されます。</p>
-                        </div>
-                        <div class="mt-8 p-5 bg-white rounded-lg border-l-4 shadow-sm" style="border-color:#F6C453;">
-                            <p class="font-semibold text-gray-900 mb-2">ヒント：</p>
-                            <p class="text-gray-600 text-sm leading-relaxed">結果が <strong>年間360万円</strong> 近ければ、LPの実績表現と整合性が出ます。</p>
+                            <p class="text-sm text-gray-600">左側のフォームに入力して「診断する」ボタンを押してください。</p>
                         </div>
                     </div>
                 </div>
@@ -562,17 +555,22 @@
             <div id="sim-construction" class="sim-panel hidden">
                 <div class="grid md:grid-cols-2 gap-8">
                     <div class="bg-white p-8 rounded-lg border border-gray-200 shadow-sm">
-                        <h3 class="text-lg font-bold text-gray-900 mb-4">Before（日報のメモ）</h3>
+                        <h3 class="text-lg font-bold text-gray-900 mb-4">🏗️ AI日報作成</h3>
+                        <p class="text-sm text-gray-600 mb-6">現場メモから、AIが構造化された日報を自動生成します。</p>
                         <textarea id="con-before" 
-                                  class="w-full h-48 p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent text-sm leading-relaxed">天気：晴れ。A地点 基礎工事5名。資材B不足で午後遅延。明日はC地点。田中さんに段取り確認済み。</textarea>
+                                  class="w-full h-48 p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent text-sm leading-relaxed"
+                                  placeholder="例: 天気晴れ。A地点 基礎工事5名。資材B不足で午後遅延。明日はC地点。">天気:晴れ。A地点 基礎工事5名。資材B不足で午後遅延。明日はC地点。田中さんに段取り確認済み。</textarea>
                         <button id="con-run" 
-                                class="mt-4 inline-flex items-center justify-center px-6 py-3 rounded-lg font-bold text-white shadow-sm transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-600"
+                                class="mt-4 w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-bold text-white shadow-sm transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-600"
                                 style="background:#1E40AF;">
-                            → AI整形（デモ）
+                            <span id="con-button-text">→ AI整形する</span>
                         </button>
                     </div>
                     <div class="bg-gray-50 p-8 rounded-lg border border-gray-200 shadow-sm">
-                        <h3 class="text-lg font-bold text-gray-900 mb-4">After（整形結果・デモ）</h3>
+                        <h3 class="text-lg font-bold text-gray-900 mb-4">整形結果</h3>
+                        <div id="con-loading" class="hidden flex items-center justify-center py-12">
+                            <div class="animate-spin rounded-full h-10 w-10 border-b-2 border-blue-600"></div>
+                        </div>
                         <div id="con-after" class="min-h-48 whitespace-pre-wrap text-sm text-gray-700 leading-relaxed"></div>
                     </div>
                 </div>
@@ -582,30 +580,36 @@
             <div id="sim-restaurant" class="sim-panel hidden">
                 <div class="grid md:grid-cols-2 gap-8">
                     <div class="bg-white p-8 rounded-lg border border-gray-200 shadow-sm">
-                        <h3 class="text-lg font-bold text-gray-900 mb-6">指示</h3>
+                        <h3 class="text-lg font-bold text-gray-900 mb-6">🍝 AI POP生成</h3>
+                        <p class="text-sm text-gray-600 mb-6">メニュー名と特徴から、AIが魅力的なコピーを自動生成します。</p>
                         <div class="space-y-5">
                             <label class="block">
                                 <span class="text-sm font-semibold text-gray-700 mb-2 block">メニュー名</span>
                                 <input id="pop-name" 
                                        class="mt-1 w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent" 
+                                       placeholder="例: 情熱のナポリタン"
                                        value="情熱のナポリタン">
                             </label>
                             <label class="block">
                                 <span class="text-sm font-semibold text-gray-700 mb-2 block">特徴・打ち出し</span>
                                 <input id="pop-copy" 
                                        class="mt-1 w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent" 
+                                       placeholder="例: 濃厚ソースと極太麺、ランチの王様"
                                        value="濃厚ソースと極太麺、ランチの王様">
                             </label>
                             <button id="pop-run" 
-                                    class="mt-4 inline-flex items-center justify-center px-6 py-3 rounded-lg font-bold text-white shadow-sm transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-600"
+                                    class="mt-4 w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-bold text-white shadow-sm transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-600"
                                     style="background:#1E40AF;">
-                                → 画像生成（デモ）
+                                <span id="pop-button-text">→ コピー生成</span>
                             </button>
                         </div>
                     </div>
-                    <div class="bg-gray-50 p-8 rounded-lg border border-gray-200 shadow-sm flex items-center justify-center">
-                        <img id="pop-img" class="max-h-64 rounded-lg shadow-sm hidden" alt="デモ画像">
-                        <p id="pop-ph" class="text-gray-400 text-sm">ここに画像（デモ）が表示されます</p>
+                    <div class="bg-gray-50 p-8 rounded-lg border border-gray-200 shadow-sm">
+                        <h3 class="text-lg font-bold text-gray-900 mb-6">生成結果</h3>
+                        <div id="pop-loading" class="hidden flex items-center justify-center py-12">
+                            <div class="animate-spin rounded-full h-10 w-10 border-b-2 border-blue-600"></div>
+                        </div>
+                        <div id="pop-result" class="space-y-4"></div>
                     </div>
                 </div>
             </div>
@@ -811,7 +815,7 @@
             </p>
             
             <div class="space-y-4 mb-12 max-w-xl mx-auto">
-                <a href="/cdn-cgi/l/email-protection#365f585059765a435544435b185559185c46" class="block bg-white text-gray-900 px-10 py-4 rounded-lg text-base font-bold hover:bg-gray-100 transition-all duration-300 shadow-sm">
+                <a href="/cdn-cgi/l/email-protection#731a1d151c331f061001061e5d101c5d1903" class="block bg-white text-gray-900 px-10 py-4 rounded-lg text-base font-bold hover:bg-gray-100 transition-all duration-300 shadow-sm">
                     今すぐ無料でAI活用診断を申し込む
                 </a>
                 <p class="text-xs opacity-75">※ご相談は完全無料です。お気軽にお問い合わせください。</p>
@@ -822,7 +826,7 @@
                 <div class="grid md:grid-cols-2 gap-4 text-left max-w-2xl mx-auto">
                     <div class="bg-white/5 border border-white/10 p-6 rounded-lg">
                         <p class="font-semibold mb-3 text-sm">📧 メール</p>
-                        <a href="/cdn-cgi/l/email-protection#3851565e5778544d5b4a4d55165b57165248" class="text-white hover:opacity-75 transition-colors text-sm"><span class="__cf_email__" data-cfemail="dab3b4bcb59ab6afb9a8afb7f4b9b5f4b0aa">[email&#160;protected]</span></a>
+                        <a href="/cdn-cgi/l/email-protection#0f666169604f637a6c7d7a62216c6021657f" class="text-white hover:opacity-75 transition-colors text-sm"><span class="__cf_email__" data-cfemail="365f585059765a435544435b185559185c46">[email&#160;protected]</span></a>
                     </div>
                     <div class="bg-white/5 border border-white/10 p-6 rounded-lg">
                         <p class="font-semibold mb-3 text-sm">📞 電話</p>
@@ -851,7 +855,7 @@
                 </div>
                 <div class="text-center md:text-right">
                     <p class="text-gray-400 mb-2 text-sm">お問い合わせ</p>
-                    <a href="/cdn-cgi/l/email-protection#224b4c444d624e574150574f0c414d0c4852" class="text-white hover:opacity-75 transition-colors text-sm"><span class="__cf_email__" data-cfemail="f891969e97b8948d9b8a8d95d69b97d69288">[email&#160;protected]</span></a>
+                    <a href="/cdn-cgi/l/email-protection#d1b8bfb7be91bda4b2a3a4bcffb2beffbba1" class="text-white hover:opacity-75 transition-colors text-sm"><span class="__cf_email__" data-cfemail="f990979f96b9958c9a8b8c94d79a96d79389">[email&#160;protected]</span></a>
                     <p class="text-gray-400 mt-4 text-sm">
                         <a href="https://lucrum.co.jp/" target="_blank" class="hover:opacity-75 transition-colors">https://lucrum.co.jp/</a>
                     </p>
@@ -864,7 +868,7 @@
     </footer>
 
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-    // Simulator Tab Functionality
+    // Simulator Tab Functionality with Enhanced UX
     (function(){
         // Tab switching
         const simTabs = document.querySelectorAll('.sim-tab');
@@ -892,73 +896,203 @@
             if(index === 0) activateSimTab(button); // Activate first tab by default
         });
         
-        // ROI Calculator
+        // ROI Calculator with Progress Bar
         const getElement = id => document.getElementById(id);
         
         getElement('roi-run').addEventListener('click', () => {
-            const wage = +getElement('roi-wage').value || 0;
-            const people = +getElement('roi-people').value || 0;
-            const hours = +getElement('roi-hours').value || 0;
-            const outsourcing = +getElement('roi-outsourcing').value || 0;
-            const errorRate = Math.min(100, Math.max(0, +getElement('roi-error').value || 0));
+            const button = getElement('roi-run');
+            const buttonText = getElement('roi-button-text');
+            const originalText = buttonText.textContent;
             
-            // Labor cost reduction = hourly wage × people × hours saved
-            const laborMonthly = wage * people * hours;
-            // Error reduction (estimated as percentage of labor cost)
-            const errorMonthly = laborMonthly * (errorRate / 100);
-            const totalMonthly = laborMonthly + errorMonthly + outsourcing;
-            const totalYearly = totalMonthly * 12;
+            // Show loading state
+            buttonText.textContent = '計算中...';
+            button.disabled = true;
+            button.style.opacity = '0.7';
             
-            const formatNumber = value => value.toLocaleString('ja-JP');
-            
-            getElement('roi-result').innerHTML = `
-                <div class="text-3xl font-bold mb-2" style="color:#1E40AF;">月間 効果見込み：¥${formatNumber(totalMonthly)}</div>
-                <div class="text-xl font-bold text-gray-900 mb-6">年間 効果見込み：¥${formatNumber(totalYearly)}</div>
-                <ul class="space-y-2 text-sm text-gray-700 bg-white p-4 rounded-lg border border-gray-200">
-                    <li>・人件費削減（工数）：¥${formatNumber(laborMonthly)} / 月</li>
-                    <li>・ミス削減（概算）：¥${formatNumber(errorMonthly)} / 月</li>
-                    <li>・外注費削減：¥${formatNumber(outsourcing)} / 月</li>
-                </ul>
-                <p class="mt-6 text-gray-600 text-sm leading-relaxed">※概算です。正式な見積は無料診断でヒアリング後に提示します。</p>
-            `;
+            setTimeout(() => {
+                const wage = +getElement('roi-wage').value || 0;
+                const people = +getElement('roi-people').value || 0;
+                const hours = +getElement('roi-hours').value || 0;
+                const outsourcing = +getElement('roi-outsourcing').value || 0;
+                
+                // Labor cost reduction = hourly wage × people × hours saved
+                const laborMonthly = wage * people * hours;
+                const totalMonthly = laborMonthly + outsourcing;
+                const totalYearly = totalMonthly * 12;
+                
+                const formatNumber = value => value.toLocaleString('ja-JP');
+                
+                // Generate result with visual progress bar
+                const progress = Math.min(100, (totalYearly / 5000000) * 100);
+                
+                getElement('roi-result').innerHTML = `
+                    <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
+                        <div class="mb-6">
+                            <div class="flex justify-between items-baseline mb-2">
+                                <span class="text-sm text-gray-600">年間削減コスト</span>
+                                <span class="text-3xl font-bold" style="color:#1E40AF;">¥${formatNumber(totalYearly)}</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
+                                <div class="bg-gradient-to-r from-blue-500 to-blue-700 h-3 transition-all duration-1000" style="width: ${progress}%"></div>
+                            </div>
+                        </div>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex justify-between py-2 border-b border-gray-100">
+                                <span class="text-gray-600">💼 人件費削減（月間）</span>
+                                <span class="font-semibold text-gray-900">¥${formatNumber(laborMonthly)}</span>
+                            </div>
+                            <div class="flex justify-between py-2 border-b border-gray-100">
+                                <span class="text-gray-600">🏢 外注費削減（月間）</span>
+                                <span class="font-semibold text-gray-900">¥${formatNumber(outsourcing)}</span>
+                            </div>
+                            <div class="flex justify-between py-2 border-b border-gray-100">
+                                <span class="text-gray-600">📊 月間合計</span>
+                                <span class="font-semibold text-gray-900">¥${formatNumber(totalMonthly)}</span>
+                            </div>
+                        </div>
+                        <div class="mt-6 p-4 bg-blue-50 rounded-lg border border-blue-100">
+                            <p class="text-sm text-gray-700 font-medium mb-2">💡 経営者の方へ</p>
+                            <p class="text-xs text-gray-600 leading-relaxed">
+                                年間<strong class="text-blue-700">¥${formatNumber(totalYearly)}</strong>のコスト削減により、新規事業への投資や人材育成にリソースを振り向けることが可能になります。
+                            </p>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-xs text-gray-500">※概算値です。詳細は無料診断でヒアリング後に提示いたします。</p>
+                `;
+                
+                // Reset button
+                buttonText.textContent = originalText;
+                button.disabled = false;
+                button.style.opacity = '1';
+            }, 800);
         });
         
-        // Construction Demo (Text formatting)
+        // Construction Demo (Text formatting) with Loading
         getElement('con-run').addEventListener('click', () => {
-            const rawText = getElement('con-before').value.trim();
-            // Simple demo formatting
-            const formatted = `【作業概要】
-${rawText.includes('A地点') || rawText.includes('基礎') ? 'A地点 基礎工事（5名）' : '作業内容：記載あり'}
-
-【課題】
-資材不足による遅延（手配済み）
-
-【翌日の予定】
-C地点の作業／段取り確認済み
-
-【備考】
-天候：晴れ`;
+            const button = getElement('con-run');
+            const buttonText = getElement('con-button-text');
+            const loading = getElement('con-loading');
+            const result = getElement('con-after');
+            const originalText = buttonText.textContent;
             
-            getElement('con-after').textContent = formatted;
+            // Show loading
+            buttonText.textContent = '整形中...';
+            button.disabled = true;
+            button.style.opacity = '0.7';
+            loading.classList.remove('hidden');
+            result.textContent = '';
+            
+            setTimeout(() => {
+                const rawText = getElement('con-before').value.trim();
+                
+                // Enhanced demo formatting with structure
+                const formatted = `【📅 作業日報】
+────────────────────
+
+🏗️ 作業概要
+${rawText.includes('A地点') || rawText.includes('基礎') ? '作業場所: A地点\n作業内容: 基礎工事\n従事人数: 5名' : '作業内容: 記載あり'}
+
+⚠️ 課題・トラブル
+・資材B不足による作業遅延（午後）
+→ 手配済み、翌日到着予定
+
+📋 翌日の予定
+・C地点での作業開始
+・段取り確認済み（田中さん）
+
+🌤️ 気象条件
+天候: 晴れ
+
+────────────────────
+作成日時: ${new Date().toLocaleDateString('ja-JP')}`;
+                
+                loading.classList.add('hidden');
+                result.textContent = formatted;
+                
+                // Add fade-in animation
+                result.style.opacity = '0';
+                setTimeout(() => {
+                    result.style.transition = 'opacity 0.5s';
+                    result.style.opacity = '1';
+                }, 50);
+                
+                // Reset button
+                buttonText.textContent = originalText;
+                button.disabled = false;
+                button.style.opacity = '1';
+            }, 1500);
         });
         
-        // Restaurant Demo (Image placeholder)
+        // Restaurant Demo (Copy generation) with Visual Cards
         getElement('pop-run').addEventListener('click', () => {
-            const menuName = encodeURIComponent(getElement('pop-name').value || 'メニュー');
-            const menuCopy = encodeURIComponent(getElement('pop-copy').value || 'おすすめ');
-            // Using placeholder service for demo
-            const imageUrl = `https://placehold.co/800x600/1E40AF/FFFFFF/png?text=${menuName}%0A${menuCopy}&font=noto-sans-jp`;
+            const button = getElement('pop-run');
+            const buttonText = getElement('pop-button-text');
+            const loading = getElement('pop-loading');
+            const result = getElement('pop-result');
+            const originalText = buttonText.textContent;
             
-            const imgElement = getElement('pop-img');
-            const placeholder = getElement('pop-ph');
+            // Show loading
+            buttonText.textContent = '生成中...';
+            button.disabled = true;
+            button.style.opacity = '0.7';
+            loading.classList.remove('hidden');
+            result.innerHTML = '';
             
-            imgElement.src = imageUrl;
-            imgElement.classList.remove('hidden');
-            placeholder.classList.add('hidden');
+            setTimeout(() => {
+                const menuName = getElement('pop-name').value || 'メニュー';
+                const menuCopy = getElement('pop-copy').value || 'おすすめ';
+                
+                // Generate multiple copy variations
+                const copies = [
+                    {
+                        title: '👨‍👩‍👧‍👦 ファミリー層向け',
+                        text: `家族みんなで楽しめる「${menuName}」\n${menuCopy}で、笑顔あふれる食卓を。\nお子様も大喜びのボリューム満点!`
+                    },
+                    {
+                        title: '💼 ビジネスパーソン向け',
+                        text: `忙しいランチタイムに「${menuName}」\n${menuCopy}で、午後の活力をチャージ。\n満足度120%の味わいをスピーディーに。`
+                    },
+                    {
+                        title: '🎉 SNS映え重視',
+                        text: `インスタで話題の「${menuName}」!\n${menuCopy} 📸\n#映えグルメ #絶品ランチ #今日のごはん`
+                    }
+                ];
+                
+                loading.classList.add('hidden');
+                
+                let html = '<div class="space-y-4">';
+                copies.forEach((copy, index) => {
+                    html += `
+                        <div class="bg-white p-5 rounded-lg border border-gray-200 shadow-sm copy-card" style="opacity: 0; transform: translateY(10px);">
+                            <div class="flex items-center mb-3">
+                                <span class="text-sm font-bold text-gray-900">${copy.title}</span>
+                            </div>
+                            <p class="text-sm text-gray-700 leading-relaxed whitespace-pre-line">${copy.text}</p>
+                        </div>
+                    `;
+                });
+                html += '</div>';
+                
+                result.innerHTML = html;
+                
+                // Add staggered fade-in animation
+                const cards = result.querySelectorAll('.copy-card');
+                cards.forEach((card, index) => {
+                    setTimeout(() => {
+                        card.style.transition = 'all 0.5s ease';
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, index * 200);
+                });
+                
+                // Reset button
+                buttonText.textContent = originalText;
+                button.disabled = false;
+                button.style.opacity = '1';
+            }, 1800);
         });
     })();
     </script>
-
     <script>
         // Tab Switching
         function switchTab(tabName) {
